@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define NODE                10000
+#define NODE                1000
 
 struct edge
 {

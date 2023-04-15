@@ -1,4 +1,5 @@
 import sys
+import time
 
 par = {}
 
@@ -47,4 +48,7 @@ if __name__ == '__main__':
     # Checking the filename from command line input
     if(len(sys.argv) > 1):
         filename = sys.argv[1]
+        time1 = time.time()
         Kruskal(filename)
+        time2 = time.time()
+        print(time2 - time1)

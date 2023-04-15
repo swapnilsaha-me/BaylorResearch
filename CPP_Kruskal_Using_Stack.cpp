@@ -37,11 +37,13 @@ bool edge_sort_comp(edge a, edge b)
     return a.w < b.w;
 }
 
-int main()
+int main(int argc, char *argv[])
 {
     //freopen("graph_edge.txt", "r", stdin);
-    freopen("input_set_2.txt", "r", stdin);
+    freopen(argv[1], "r", stdin);
 
+    time_t begin, end;
+    time(&begin);
     priority_queue<edge, vector<edge>, comp>Q;
     edge temp;
     while(scanf("%d %d %d", &temp.src, &temp.dest, &temp.w) == 3)
@@ -67,10 +69,11 @@ int main()
         }
     }
 
+    time(&end);
     cout << endl << endl << endl;
     cout << "Cost is = " << cost << endl;
     cout << "Total Edges = " << vv.size() << endl;
-    cout << "Edges are: " << endl;
+    cout << "Required Time = " << end - begin << endl;
 
     /*
     sort(vv.begin(), vv.end(), edge_sort_comp);
